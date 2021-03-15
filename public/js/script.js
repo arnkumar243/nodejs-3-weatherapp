@@ -8,7 +8,7 @@ document.addEventListener('submit', (e) => {
     e.preventDefault()
     errorMsg.textContent = ''
     msg.textContent = 'Loading ...'
-    fetch('http://localhost:3000/weather?address=' + inputField.value).then((response) => {
+    fetch('/weather?address=' + inputField.value).then((response) => {
     response.json().then((data) => {
             if(data.error) {
                 errorMsg.textContent = data.error
